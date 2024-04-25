@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+/* Show and Hide Menu */
+.showMenu { left: 0; }
+.hideMenu { left: -100%; }
+/* Shadow Effect */
+.shadow-img { filter: drop-shadow(0 12px 24px hsla(0, 0%, 0%, .4)); }
+.shadowCircle { text-shadow: 0 12px 24px hsla(0, 0%, 0%, 0.4); }
+.shadowButton { text-shadow: 0 -4px 8px hsla(0, 0%, 0%, 0.3); }
+.shadowCard { text-shadow: 0 -8px 24px hsla(0, 0%, 0%, 0.3); }
+.shadowText { text-shadow: 0 2px 4px hsl(170, 100%, 23%); }
+.shadowCircleInset { box-shadow: inset 0 12px 24px hsla(0, 0%, 0%, 0.4); }
+.shadowButtonInset { box-shadow: inset  0 -4px 8px hsla(0, 0%, 0%, 0.3); }
+.shadowCardInset { box-shadow: inset  0 -8px 24px hsla(0, 0%, 0%, 0.3); }
+/* Buttons */
+.btn{
+    padding: 15px 30px;
+    background-color: hsl(45, 100%, 52%);
+    color: #333;
+    font-weight: 700;
+    border-radius: 4rem;
+    box-shadow: inset 0 -4px 8px hsla(0, 0%, 0%, 0.3);
+    text-transform: capitalize;
+    transition: .3s linear;
+}
+.btn-border{
+    background-color: transparent;
+    box-shadow: none;
+    border: 3px solid hsl(45, 100%, 52%);
+    color: hsl(45, 100%, 52%);
+}
+/* Header Scroll Shadow */
+.scrollHeader{
+    box-shadow: 0px 2px 16px hsla(0, 0%, 0%, .4);
+    transition: .2s ease-in-out;
+}
+
+/* Section Title */
+.section{
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 5rem;
+}
+.section__title{
+    font-family: 'Titan One', sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(30px, 2vw, 40px);
+    line-height: 100%;
+    letter-spacing: 2px;
+}
+.section__paragraph{
+    max-width: 55ch;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 1.5rem;
+}
