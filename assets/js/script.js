@@ -32,3 +32,17 @@ function scrollHeader(){
         header.classList.remove('scrollHeader');
     }
 }
+
+// Swipper JS
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    grabCursor: true,
+    slidesPerView: 2,
+    centeredSlides: true,
+    initialSlide: 3,
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+        }
+    },
+});

@@ -8,6 +8,8 @@
     <!-- Linked CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/output.css">
+    <!-- Linked Swipper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- Linked Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +40,7 @@
                     <button id="close" class="absolute md:hidden top-12 right-10 text-white hover:text-secondary duration-300" href="#"><i class="fa-regular fa-circle-xmark"></i></butotn>
                 </ul>
                 <!-- Menu Toggle -->
-                <button id="menu" class="md:hidden" href="#"><i class="fa-solid fa-sliders"></i></button>
+                <button id="menu" class="md:hidden" href="#"><i class="fa-solid fa-bars"></i></button>
             </nav>
         </div>
     </header>
@@ -66,7 +68,7 @@
                         <div class="w-[320px] md:w-[420px] h-[320px] md:h-[420px] rounded-full bg-primary shadowCircleInset grid place-items-center mx-auto relative">
                             <div class="w-[250px] md:w-[330px] h-[250px] md:h-[330px] rounded-full bg-secondary shadowCircleInset"></div>
                             <!-- Banner Image -->
-                            <img class="w-[250px] md:w-[330px] absolute inset-0 rotate-12 shadow-img mx-auto" src="assets/img/home-chips.png" alt="banner-img">
+                            <img class="w-[250px] md:w-[330px] absolute inset-0 rotate-12 shadowImg mx-auto" src="assets/img/home-chips.png" alt="banner-img">
                         
                             <!-- Small Images -->
                             <img class="w-[60px] md:w-[80px] m-auto absolute top-32 right-0" src="assets/img/chips-1.png" alt="">
@@ -82,7 +84,7 @@
         </section>
         <!-- End -->
         <!-- Favourites Section -->
-        <section class="py-5" id="favourites">
+        <section class="py-20" id="favourites">
             <div class="container mx-auto px-5 md:px-0">
                 <!-- Section Title -->
                 <div class="section">
@@ -91,42 +93,226 @@
                     <img class="w-[40px] md:w-[60px] absolute bottom-0 -left-2.5 md:left-0 opacity-50 rotate-45" src="assets/img/cheese.png" alt="">
                     <img class="w-[40px] md:w-[60px] absolute top-0 -right-2.5 md:right-0 opacity-50" src="assets/img/cheese.png" alt="">
                 </div>
-                <!-- Favourite Slider -->
-                <div class="flex flex-col md:flex-row justify-center items-center gap-10">
-                    <!-- Single Slide -->
-                    <div class="relative">
-                        <img class="w-[200px] md:w-[270px]" src="assets/img/favorite-chips-3.png" alt="">
-                        <img class="w-[70px] md:w-[100px] absolute top-0 left-0 shadow-img" src="assets/img/leaf-1.png" alt="">
-                        <img class="w-[70px] md:w-[100px] absolute top-0 left-0 shadow-img" src="assets/img/leaf-2.png" alt="">
-                    </div>
-                    <!-- Single Slide -->
-                    <div class="relative">
-                        <img class="w-[200px] md:w-[270px]" src="assets/img/favorite-chips-1.png" alt="">
-                        <img class="w-[70px] md:w-[100px] absolute top-0 -right-2 shadow-img" src="assets/img/leaf-1.png" alt="">
-                        <img class="w-[70px] md:w-[100px] absolute bottom-0 -left-2 shadow-img" src="assets/img/leaf-2.png" alt="">
-                    </div>
-                    <!-- Single Slide -->
-                    <div class="relative">
-                        <img class="w-[200px] md:w-[270px]" src="assets/img/favorite-chips-2.png" alt="">
-                        <img class="w-[70px] md:w-[100px] absolute top-0 left-0 shadow-img" src="assets/img/leaf-1.png" alt="">
-                        <img class="w-[70px] md:w-[100px] absolute top-0 left-0 shadow-img" src="assets/img/leaf-2.png" alt="">
+                <!-- Favourite Swipper Slider -->
+                <div class="swiper flex flex-row justify-center items-center">
+                    <div class="swiper-wrapper">
+                        <!-- Single Swipper Slide -->
+                        <div class="swiper-slide relative">
+                            <img class="swiperImg w-[220px] md:w-[270px]" src="assets/img/favorite-chips-3.png" alt="">
+                            <img class="swiperLeaf w-[50px] md:w-[80px] absolute top-0 right-0 xl:right-16 shadowImg" src="assets/img/leaf-1.png" alt="">
+                            <img class="swiperLeaf w-[50px] md:w-[80px] absolute bottom-0 left-0 xl:left-16 shadowImg" src="assets/img/leaf-2.png" alt="">
+                        </div>
+                        <!-- Single Swipper Slide -->
+                        <div class="swiper-slide relative">
+                            <img class="swiperImg w-[220px] md:w-[270px]" src="assets/img/favorite-chips-1.png" alt="">
+                            <img class="swiperLeaf w-[50px] md:w-[80px] absolute top-0 right-0 xl:right-16 shadowImg" src="assets/img/leaf-1.png" alt="">
+                            <img class="swiperLeaf w-[50px] md:w-[80px] absolute bottom-0 left-0 xl:left-16 shadowImg" src="assets/img/leaf-2.png" alt="">
+                        </div>
+                        <!-- Single Swipper Slide -->
+                        <div class="swiper-slide relative">
+                            <img class="swiperImg w-[220px] md:w-[270px]" src="assets/img/favorite-chips-2.png" alt="">
+                            <img class="swiperLeaf w-[50px] md:w-[80px] absolute top-0 right-0 xl:right-16 shadowImg" src="assets/img/leaf-1.png" alt="">
+                            <img class="swiperLeaf w-[50px] md:w-[80px] absolute bottom-0 left-0 xl:left-16 shadowImg" src="assets/img/leaf-2.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Care Section -->
-        <section class="" id="care"></section>
+        <section class="py-20 bg-primaryDark" id="care">
+            <div class="container mx-auto px-5 md:px-0">
+                <!-- Section Title -->
+                <div class="section">
+                    <h4 class="section__title">enjoy and take <br> care of your health</h4>
+                </div>
+                <!-- Care -->
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <!-- Care Image -->
+                    <div class="mx-auto"><img class="w-[350px] md:w-[450px]" src="assets/img/care-chips.png" alt=""></div>
+                    <!-- Care Content -->
+                    <div class="flex flex-col justify-between items-center gap-5 text-base md:text-lg font-medium">
+                        <p><i class="fa-solid fa-seedling size-8 text-secondary pr-2.5"></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, quaerat.</p>
+                        <p><i class="fa-brands fa-canadian-maple-leaf size-8 text-secondary pr-2.5"></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, quaerat.</p>
+                        <p><i class="fa-solid fa-heart-pulse size-8 text-secondary pr-2.5"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.</p>
+                        <p><i class="fa-solid fa-hand-holding-heart size-8 text-secondary pr-2.5"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Ad Banner Section -->
+        <section class="my-20 bg-secondary py-10" id="ad">
+            <div class="container mx-auto px-5 md:px-0">
+                <!-- Ad Banner -->
+                <div class="flex flex-col md:flex-row justify-between items-center font-titanOne text-secondaryDark font-medium uppercase px-10">
+                    <div class="flex gap-5 text-3xl mx-auto">
+                        <i class="fa-solid fa-leaf"></i>
+                        <h4>good for nature</h4>
+                    </div>
+                    <div class="flex gap-5 text-3xl mx-auto">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <h4>low for callories</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Products Section -->
-        <section class="" id="products"></section>
+        <section class="py-20" id="products">
+            <div class="container mx-auto px-5 md:px-0">
+                <!-- Section Title -->
+                <div class="section pb-10">
+                    <h4 class="section__title">our best selling products</h4>
+                </div>
+                <!-- Products -->
+                <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-20 pt-10 relative">
+                    <!-- Single Products -->
+                    <div class="group flex flex-col justify-between gap-5 bg-primaryDark shadowCardInset rounded-xl pt-12 pb-6 px-6">
+                        <!-- Product Image -->
+                        <img class="group-hover:group-hover:-translate-y-3 w-[200px] lg:w-[230px] mt-[-100px] shadowImg mx-auto duration-300" src="assets/img/product-chips-1.png" alt="">
+                        <!-- Product Content -->
+                        <div class="flex justify-between items-end gap-5 pt-5 capitalize">
+                            <div class="space-y-1">
+                                <span class="text-base">flavor</span>
+                                <h4 class="font-titanOne font-normal text-xl md:text-2xl">chips</h4>
+                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$8</h5>
+                            </div>
+                            <div>
+                                <button class="inline-block bg-secondary rounded-md p-2 md:p-2.5"><i class="fa-solid fa-cart-shopping text-black md:size-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Products -->
+                    <div class="group flex flex-col justify-between gap-5 bg-primaryDark shadowCardInset rounded-xl pt-12 pb-6 px-6">
+                        <!-- Product Image -->
+                        <img class="group-hover:group-hover:-translate-y-3 w-[200px] lg:w-[230px] mt-[-100px] shadowImg mx-auto duration-300" src="assets/img/product-chips-2.png" alt="">
+                        <!-- Product Content -->
+                        <div class="flex justify-between items-end gap-5 pt-5 capitalize">
+                            <div class="space-y-1">
+                                <span class="text-base">flavor</span>
+                                <h4 class="font-titanOne font-normal text-xl md:text-2xl">chips</h4>
+                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$8</h5>
+                            </div>
+                            <div>
+                                <button class="inline-block bg-secondary rounded-md p-2 md:p-2.5"><i class="fa-solid fa-cart-shopping text-black md:size-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Products -->
+                    <div class="group flex flex-col justify-between gap-5 bg-primaryDark shadowCardInset rounded-xl pt-12 pb-6 px-6">
+                        <!-- Product Image -->
+                        <img class="group-hover:group-hover:-translate-y-3 w-[200px] lg:w-[230px] mt-[-100px] shadowImg mx-auto duration-300" src="assets/img/product-chips-3.png" alt="">
+                        <!-- Product Content -->
+                        <div class="flex justify-between items-end gap-5 pt-5 capitalize">
+                            <div class="space-y-1">
+                                <span class="text-base">flavor</span>
+                                <h4 class="font-titanOne font-normal text-xl md:text-2xl">chips</h4>
+                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$8</h5>
+                            </div>
+                            <div>
+                                <button class="inline-block bg-secondary rounded-md p-2 md:p-2.5"><i class="fa-solid fa-cart-shopping text-black md:size-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Products -->
+                    <div class="group flex flex-col justify-between gap-5 bg-primaryDark shadowCardInset rounded-xl pt-12 pb-6 px-6">
+                        <!-- Product Image -->
+                        <img class="group-hover:-translate-y-3 w-[200px] lg:w-[230px] mt-[-100px] shadowImg mx-auto duration-300" src="assets/img/product-chips-4.png" alt="">
+                        <!-- Product Content -->
+                        <div class="flex justify-between items-end gap-5 pt-5 capitalize">
+                            <div class="space-y-1">
+                                <span class="text-base">flavor</span>
+                                <h4 class="font-titanOne font-normal text-xl md:text-2xl">chips</h4>
+                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$8</h5>
+                            </div>
+                            <div>
+                                <button class="inline-block bg-secondary rounded-md p-2 md:p-2.5"><i class="fa-solid fa-cart-shopping text-black md:size-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Products -->
+                    <div class="group flex flex-col justify-between gap-5 bg-primaryDark shadowCardInset rounded-xl pt-12 pb-6 px-6">
+                        <!-- Product Image -->
+                        <img class="group-hover:-translate-y-3 w-[200px] lg:w-[230px] mt-[-100px] shadowImg mx-auto duration-300" src="assets/img/product-chips-5.png" alt="">
+                        <!-- Product Content -->
+                        <div class="flex justify-between items-end gap-5 pt-5 capitalize">
+                            <div class="space-y-1">
+                                <span class="text-base">flavor</span>
+                                <h4 class="font-titanOne font-normal text-xl md:text-2xl">chips</h4>
+                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$8</h5>
+                            </div>
+                            <div>
+                                <button class="inline-block bg-secondary rounded-md p-2 md:p-2.5"><i class="fa-solid fa-cart-shopping text-black md:size-5"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Extra Icons for Decorations -->
+                    <img class="w-[50px] md:w-[80px] opacity-50 absolute -top-16 left-0 md:-left-5 rotate-45 -z-10" src="assets/img/crab.png" alt="">
+                    <img class="w-[50px] md:w-[80px] opacity-50 absolute -top-12 right-0 md:-right-5 rotate-12 -z-10" src="assets/img/hamburger.png" alt="">
+                    <img class="w-[50px] md:w-[80px] opacity-50 absolute -bottom-16 left-0 md:-left-5 -rotate-6 -z-10" src="assets/img/cheese.png" alt="">
+                </div>
+            </div>
+        </section>
         <!-- Contact Section -->
-        <section class="" id="contact"></section>
+        <section class="py-20" id="contact">
+            <div class="container mx-auto px-5 md:px-0">
+                <div class="bg-primaryDarken shadowCardInset p-5 rounded-[3rem] overflow-hidden">
+                    <!-- Section Title -->
+                    <div class="section pt-5 !mb-10 md:mb-auto">
+                        <h4 class="section__title">contact us to <br> eat chips</h4>
+                    </div>
+                    <!-- Contact -->
+                    <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left relative">
+                        <!-- Contact Content -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 capitalize mx-auto">
+                            <div>
+                                <h4 class="font-titanOne font-normal text-lg md:text-2xl mb-2">write to us</h4>
+                                <i class="fa-brands fa-whatsapp text-secondary md:size-5 pr-1"></i>
+                                <i class="fa-brands fa-facebook-messenger text-secondary md:size-5 pr-1"></i>
+                                <i class="fa-solid fa-envelope text-secondary md:size-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-titanOne font-normal text-lg md:text-2xl mb-2">call us</h4>
+                                <p class="text-base md:text-lg font-normal">+880 555 2345 5667 </p>
+                                <p class="text-base md:text-lg font-normal">+880 555 2345 </p>
+                            </div>
+                            <div>
+                                <h4 class="font-titanOne font-normal text-lg md:text-2xl mb-2">find us here</h4>
+                                <p class="text-base md:text-lg font-normal">lined town h46+ gl, ny</p>
+                            </div>
+                        </div>
+                        <!-- Contact Image -->
+                        <div class="mx-auto z-10">
+                            <img class="w-[200px] md:w-[250px]" src="assets/img/contact-man.png" alt="">
+                        </div>
+                        <!-- Extra Icons for Decorations -->
+                        <img class="w-[50px] md:w-[80px] opacity-50 absolute -top-12 left-0 md:left-20 rotate-45" src="assets/img/crab.png" alt="">
+                        <img class="w-[50px] md:w-[80px] opacity-50 absolute top-32 right-0 md:right-auto md:left-[40rem] rotate-12" src="assets/img/shrimp.png" alt="">
+                        <img class="w-[50px] md:w-[80px] opacity-50 absolute bottom-20 md:-bottom-10 left-0 md:left-32 -rotate-6" src="assets/img/meat.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section -->
     </main>
+    <footer class="pt-20 pb-10" id="footer">
+        <div class="container mx-auto px-5 md:px-0">
+            <div class="capitalize">
+                <h4 class="text-center font-titanOne font-normal text-lg md:text-2xl mb-3">chips</h4>
+                <div class="flex flex-col md:flex-row justify-between items-center gap-2.5 text-center">
+                    <a href="">terms and conditions</a>
+                    <p>@all right reserved by this site </p>
+                    <a href="">privacy policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- Linked Font Awesome -->
     <script
     src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
     integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
+    <!-- Linked Swipper JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- Linked JS -->
     <script src="assets/js/script.js"></script>
 </body>
