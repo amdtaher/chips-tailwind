@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap" rel="stylesheet">
 </head>
-<body class="bg-primary text-white font-poppins">
+<body class="bg-primary text-white font-poppins relative">
     <!-- Header -->
     <header class="header w-full fixed top-0 left-0 z-50 py-5">
         <div class="container m-auto px-5 md:px-0">
@@ -47,12 +47,12 @@
     <!-- Main Contents -->
     <main>
         <!-- Banner Section -->
-        <section class="py-32" id="home">
+        <section class="py-24 md:py-64" id="home">
             <div class="container mx-auto px-5 md:px-0">
                 <!-- Banner -->
                 <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-20 md:gap-10">
                     <!-- Banner Left -->
-                    <div class="flex flex-col justify-between items-center md:items-start gap-5 text-center md:text-left relative">
+                    <div class="banner-content flex flex-col justify-between items-center md:items-start gap-5 text-center md:text-left relative">
                         <h2 class="text-6xl md:text-[80px] font-titanOne shadowText uppercase">snacks<br>with no<br>limit</h2>
                         <p class="max-w-prose text-lg font-medium shadowText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi enim distinctio totam dolore ipsam doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, laborum!</p>
                         <img class="w-12 md:w-[4rem] absolute top-32 md:top-[11rem] right-10 md:right-[6rem] lg:right-[12rem] xl:right-[20rem] opacity-50" src="assets/img/meat.png" alt="">
@@ -63,26 +63,26 @@
                         </div>
                     </div>
                     <!-- Banner Right -->
-                    <div id="relative flex justify-start items-start">
-                        <!-- Image Circle -->
+                    <div class="banner-image relative flex justify-start items-start">
                         <div class="w-[320px] md:w-[420px] h-[320px] md:h-[420px] rounded-full bg-primary shadowCircleInset grid place-items-center mx-auto relative">
+                            <!-- Image Circle -->
                             <div class="w-[250px] md:w-[330px] h-[250px] md:h-[330px] rounded-full bg-secondary shadowCircleInset"></div>
                             <!-- Banner Image -->
                             <img class="w-[250px] md:w-[330px] absolute inset-0 rotate-12 shadowImg mx-auto" src="assets/img/home-chips.png" alt="banner-img">
                         
                             <!-- Small Images -->
-                            <img class="w-[60px] md:w-[80px] m-auto absolute top-32 right-0" src="assets/img/chips-1.png" alt="">
-                            <img class="w-[60px] md:w-[80px] m-auto absolute bottom-0 right-0" src="assets/img/chips-2.png" alt="">
-                            <img class="w-[60px] md:w-[80px] m-auto absolute top-0 left-0" src="assets/img/chips-3.png" alt="">
-                            <img class="w-[60px] md:w-[80px] m-auto absolute top-0 right-0" src="assets/img/tomato-1.png" alt="">
-                            <img class="w-[60px] md:w-[80px] m-auto absolute bottom-0 left-16" src="assets/img/tomato-2.png" alt="">
-                            <img class="w-[60px] md:w-[80px] m-auto absolute bottom-32 left-0" src="assets/img/leaf-3.png" alt="">
+                            <img class="banner-extra-chips w-[60px] md:w-[80px] m-auto absolute top-32 right-0" src="assets/img/chips-1.png" alt="">
+                            <img class="banner-extra-chips w-[60px] md:w-[80px] m-auto absolute bottom-0 right-0" src="assets/img/chips-2.png" alt="">
+                            <img class="banner-extra-chips w-[60px] md:w-[80px] m-auto absolute top-0 left-0" src="assets/img/chips-3.png" alt="">
+                            <img class="banner-extra-tomato w-[60px] md:w-[80px] m-auto absolute top-0 right-0" src="assets/img/tomato-1.png" alt="">
+                            <img class="banner-extra-tomato w-[60px] md:w-[80px] m-auto absolute bottom-0 left-16" src="assets/img/tomato-2.png" alt="">
+                            <img class="banner-extra-leaf w-[60px] md:w-[80px] m-auto absolute bottom-32 left-0" src="assets/img/leaf-3.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- End -->
+        <!-- Banner End -->
         <!-- Favourites Section -->
         <section class="py-20" id="favourites">
             <div class="container mx-auto px-5 md:px-0">
@@ -118,6 +118,7 @@
                 </div>
             </div>
         </section>
+        <!-- Favourites End -->
         <!-- Care Section -->
         <section class="py-20 bg-primaryDark" id="care">
             <div class="container mx-auto px-5 md:px-0">
@@ -126,35 +127,49 @@
                     <h4 class="section__title">enjoy and take <br> care of your health</h4>
                 </div>
                 <!-- Care -->
-                <div class="flex flex-col md:flex-row justify-between items-center gap-5">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-10">
                     <!-- Care Image -->
-                    <div class="mx-auto"><img class="w-[350px] md:w-[450px]" src="assets/img/care-chips.png" alt=""></div>
+                    <div class="care-image mx-auto"><img class="w-[350px] md:w-[450px]" src="assets/img/care-chips.png" alt=""></div>
                     <!-- Care Content -->
-                    <div class="flex flex-col justify-between items-center gap-5 text-base md:text-lg font-medium">
-                        <p><i class="fa-solid fa-seedling size-8 text-secondary pr-2.5"></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, quaerat.</p>
-                        <p><i class="fa-brands fa-canadian-maple-leaf size-8 text-secondary pr-2.5"></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, quaerat.</p>
-                        <p><i class="fa-solid fa-heart-pulse size-8 text-secondary pr-2.5"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.</p>
-                        <p><i class="fa-solid fa-hand-holding-heart size-8 text-secondary pr-2.5"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.</p>
-                    </div>
+                    <ul class="care-content flex flex-col justify-between items-center gap-5 text-base md:text-lg font-medium">
+                        <li class="flex justify-between items-center gap-5">
+                            <i class="fa-solid fa-seedling size-8 text-secondary"></i>
+                            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, quaerat.</p>
+                        </li>
+                        <li class="flex justify-between items-center gap-5">
+                            <i class="fa-brands fa-canadian-maple-leaf size-8 text-secondary"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, quaerat.</p>
+                        </li>
+                        <li class="flex justify-between items-center gap-5">
+                            <i class="fa-solid fa-heart-pulse size-8 text-secondary"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, quaerat.</p>
+                        </li>
+                        <li class="flex justify-between items-center gap-5">
+                            <i class="fa-solid fa-hand-holding-heart size-8 text-secondary"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, quaerat.</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
+        <!-- Care End -->
         <!-- Ad Banner Section -->
-        <section class="my-20 bg-secondary py-10" id="ad">
+        <section class="bg-secondary py-5 md:py-10" id="ad">
             <div class="container mx-auto px-5 md:px-0">
                 <!-- Ad Banner -->
                 <div class="flex flex-col md:flex-row justify-between items-center gap-5 font-titanOne text-secondaryDark font-medium uppercase px-5 md:px-10">
-                    <div class="flex gap-5 text-xl md:text-3xl mx-auto">
+                    <div class="flex gap-5 text-xl md:text-2xl lg:text-4xl mx-auto">
                         <i class="fa-solid fa-leaf"></i>
                         <h4>good for nature</h4>
                     </div>
-                    <div class="flex gap-5 text-xl md:text-3xl mx-auto">
+                    <div class="flex gap-5 text-xl md:text-2xl lg:text-4xl mx-auto">
                         <i class="fa-solid fa-heart-pulse"></i>
                         <h4>low for callories</h4>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Ad Banner End -->
         <!-- Products Section -->
         <section class="py-20" id="products">
             <div class="container mx-auto px-5 md:px-0">
@@ -173,7 +188,7 @@
                             <div class="space-y-1">
                                 <span class="text-base">flavor</span>
                                 <h4 class="font-titanOne font-normal text-xl md:text-2xl">chips</h4>
-                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$8</h5>
+                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$0.99</h5>
                             </div>
                             <div>
                                 <button class="inline-block bg-secondary rounded-md p-2 md:p-2.5"><i class="fa-solid fa-cart-shopping text-black md:size-5"></i></button>
@@ -189,7 +204,7 @@
                             <div class="space-y-1">
                                 <span class="text-base">flavor</span>
                                 <h4 class="font-titanOne font-normal text-xl md:text-2xl">chips</h4>
-                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$8</h5>
+                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$0.99</h5>
                             </div>
                             <div>
                                 <button class="inline-block bg-secondary rounded-md p-2 md:p-2.5"><i class="fa-solid fa-cart-shopping text-black md:size-5"></i></button>
@@ -205,7 +220,7 @@
                             <div class="space-y-1">
                                 <span class="text-base">flavor</span>
                                 <h4 class="font-titanOne font-normal text-xl md:text-2xl">chips</h4>
-                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$8</h5>
+                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$0.99</h5>
                             </div>
                             <div>
                                 <button class="inline-block bg-secondary rounded-md p-2 md:p-2.5"><i class="fa-solid fa-cart-shopping text-black md:size-5"></i></button>
@@ -221,7 +236,7 @@
                             <div class="space-y-1">
                                 <span class="text-base">flavor</span>
                                 <h4 class="font-titanOne font-normal text-xl md:text-2xl">chips</h4>
-                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$8</h5>
+                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$0.99</h5>
                             </div>
                             <div>
                                 <button class="inline-block bg-secondary rounded-md p-2 md:p-2.5"><i class="fa-solid fa-cart-shopping text-black md:size-5"></i></button>
@@ -237,7 +252,7 @@
                             <div class="space-y-1">
                                 <span class="text-base">flavor</span>
                                 <h4 class="font-titanOne font-normal text-xl md:text-2xl">chips</h4>
-                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$8</h5>
+                                <h5 class="font-titanOne font-normal text-lg md:text-xl">$0.99</h5>
                             </div>
                             <div>
                                 <button class="inline-block bg-secondary rounded-md p-2 md:p-2.5"><i class="fa-solid fa-cart-shopping text-black md:size-5"></i></button>
@@ -251,6 +266,7 @@
                 </div>
             </div>
         </section>
+        <!-- Products End -->
         <!-- Contact Section -->
         <section class="py-20" id="contact">
             <div class="container mx-auto px-5 md:px-0">
@@ -260,28 +276,28 @@
                         <h4 class="section__title">contact us to <br> eat chips</h4>
                     </div>
                     <!-- Contact -->
-                    <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left relative">
+                    <div class="flex flex-col md:flex-row justify-between items-center md:px-10 text-center md:text-left relative">
                         <!-- Contact Content -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 capitalize mx-auto">
+                        <div class="contact-content grid grid-cols-1 md:grid-cols-2 gap-5 capitalize mx-auto">
                             <div>
-                                <h4 class="font-titanOne font-normal text-lg md:text-2xl mb-2">write to us</h4>
-                                <i class="fa-brands fa-whatsapp text-secondary md:size-5 pr-1"></i>
-                                <i class="fa-brands fa-facebook-messenger text-secondary md:size-5 pr-1"></i>
-                                <i class="fa-solid fa-envelope text-secondary md:size-5"></i>
+                                <h4 class="font-titanOne font-normal text-lg md:text-3xl mb-2">write to us</h4>
+                                <i class="fa-brands fa-whatsapp text-secondary md:size-6 pr-1"></i>
+                                <i class="fa-brands fa-facebook-messenger text-secondary md:size-6 pr-1"></i>
+                                <i class="fa-solid fa-envelope text-secondary md:size-6"></i>
                             </div>
                             <div>
-                                <h4 class="font-titanOne font-normal text-lg md:text-2xl mb-2">call us</h4>
+                                <h4 class="font-titanOne font-normal text-lg md:text-3xl mb-2">call us</h4>
                                 <p class="text-base md:text-lg font-normal">+880 555 2345 5667 </p>
                                 <p class="text-base md:text-lg font-normal">+880 555 2345 </p>
                             </div>
                             <div>
-                                <h4 class="font-titanOne font-normal text-lg md:text-2xl mb-2">find us here</h4>
+                                <h4 class="font-titanOne font-normal text-lg md:text-3xl mb-2">find us here</h4>
                                 <p class="text-base md:text-lg font-normal">lined town h46+ gl, ny</p>
                             </div>
                         </div>
                         <!-- Contact Image -->
-                        <div class="mx-auto z-10">
-                            <img class="w-[200px] md:w-[250px]" src="assets/img/contact-man.png" alt="">
+                        <div class="contact-image mx-auto z-10">
+                            <img class="w-[220px] md:w-[330px]" src="assets/img/contact-man.png" alt="">
                         </div>
                         <!-- Extra Icons for Decorations -->
                         <img class="w-[50px] md:w-[80px] opacity-50 absolute -top-12 left-0 md:left-20 rotate-45" src="assets/img/crab.png" alt="">
@@ -291,20 +307,24 @@
                 </div>
             </div>
         </section>
+        <!-- Contact End -->
     </main>
     <!-- Footer Section -->
     <footer class="pt-20 pb-10" id="footer">
         <div class="container mx-auto px-5 md:px-0">
             <div class="capitalize">
-                <h4 class="text-center font-titanOne font-normal text-2xl md:text-4xl mb-3">chips</h4>
+                <h4 class="text-center font-titanOne font-normal text-2xl md:text-4xl mb-3 duration-300 hover:text-secondary">chips</h4>
                 <div class="flex flex-col md:flex-row justify-between items-center gap-2.5 text-center">
-                    <a href="">terms and conditions</a>
+                    <a class="hover:text-secondary duration-300" href="">terms and conditions</a>
                     <p>@all right reserved by this site </p>
-                    <a href="">privacy policy</a>
+                    <a class="hover:text-secondary duration-300" href="">privacy policy</a>
                 </div>
             </div>
         </div>
     </footer>
+    <!-- Footer End -->
+    <!-- To the Top Button -->
+    <button id="scrollBtn" class="scrollBtnHide w-[50px] h-[50px] leading-tight fixed right-5 bg-primaryDarken shadowCircle rounded-full duration-300 z-50 hover:bg-primaryDark"><i class="fa-solid fa-arrow-up"></i></button>
     <!-- Linked Font Awesome -->
     <script
     src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
@@ -313,6 +333,8 @@
     referrerpolicy="no-referrer"></script>
     <!-- Linked Swipper JS -->
     <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Linked ScrollReveal JS -->
+    <script src="assets/js/scrollreveal.min.js"></script>
     <!-- Linked JS -->
     <script src="assets/js/script.js"></script>
 </body>

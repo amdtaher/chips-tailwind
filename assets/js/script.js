@@ -46,3 +46,52 @@ const swiper = new Swiper('.swiper', {
         }
     },
 });
+
+// To the Top Button
+let scrollBtn = document.querySelector('#scrollBtn');
+function showScrollBtn(){
+    if(window.scrollY >= 300){
+        scrollBtn.classList.add('scrollBtnShow');
+        scrollBtn.classList.remove('scrollBtnHide');
+    }else{
+        scrollBtn.classList.remove('scrollBtnShow');
+        scrollBtn.classList.add('scrollBtnHide');
+    }
+}
+window.addEventListener('scroll', showScrollBtn)
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+scrollBtn.addEventListener('click', topFunction)
+
+// Active Nav Link
+document.addEventListener('DOMContentLoaded',
+function () {
+    const navItems = document.querySelectorAll('#navMenu>li>a');
+    navItems.forEach(item => {
+        item.addEventListener('click',
+            function () {
+                navItems.forEach(navItem => navItem
+                    .classList.remove('active'));
+                this.classList.add('active');
+            });
+    });
+});
+
+// Scroll Reveal Animation
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 300,
+    // reset: true, //reseting animation for repeating without reloading 
+})
+ScrollReveal().reveal(`.banner-content, .banner-image, #favourites, #products, #footer`);
+ScrollReveal().reveal(`.banner-image`, {delay: 1200, scale: 0.7});
+ScrollReveal().reveal(`.banner-extra-chips`, {delay: 1800, scale: 0.7});
+ScrollReveal().reveal(`.banner-extra-tomato`, {delay: 2100, scale: 0.7});
+ScrollReveal().reveal(`.banner-extra-leaf`, {delay: 2500, scale: 0.7});
+ScrollReveal().reveal(`.care-image, .contact-image`, {origin: 'left', distance: '100px', delay: 600});
+ScrollReveal().reveal(`.care-content, .contact-content`, {origin: 'right', distance: '100px', delay: 700});
+ScrollReveal().reveal(`#ad`, {delay: 500, origin: 'right', distance: '300px'});

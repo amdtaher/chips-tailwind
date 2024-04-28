@@ -86,6 +86,17 @@
     scale: 1;
     filter: drop-shadow(0 12px 24px hsla(0, 0%, 0%, .4));
 }
-:is(.swiper-slide-active, .swiper-slide-duplicate-active) .swiperLeaf{
-    scale: 1;
+:is(.swiper-slide-active, .swiper-slide-duplicate-active) .swiperLeaf{ scale: 1; }
+
+/* Scroll Bar */
+::-webkit-scrollbar{ width: 10px; background-color: hsl(170, 100%, 28%); }
+::-webkit-scrollbar-thumb{ background-color: hsl(170, 100%, 23%); }
+::-webkit-scrollbar-thumb:hover{ background-color: hsl(171, 72%, 14%); }
+
+/* Scroll to Top Button */
+.scrollBtnHide{ bottom: -150px; }
+.scrollBtnShow{ bottom: 20px; }
+
+.active{
+    color: hsl(45, 100%, 52%);
 }
